@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Reservation | Paarambariya Virundhu</title>
+
+    <link rel="stylesheet" href="Style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+  <header class="header">
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <a href="Homepage.html">
+                PAARAMBARIYA VIRUNDHU
+            </a>
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="Homepage.html">Home</a>
+            </li>
+
+            <li>
+                <a href="Menu.html">Menu</a>
+            </li>
+
+            <li>
+                <a href="About.html">About Us</a>
+            </li>
+
+            <li>
+                <a href="Gallery.html">Gallery</a>
+            </li>
+
+            <li>
+                <a href="Reservation.html" class="active">Reservation</a>
+            </li>
+
+            <li>
+                <a href="Contact.html">Contact</a>
+            </li>
+
+        </ul>
+
+        <button type="button" class="Menu-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+    </nav>
+
+</header>
+
+
+    <!-- ================= RESERVATION HERO ================= -->
+    <section class="Reservation-hero">
+
+        <div class="Reservation-hero-content">
+
+            <p class="section-label">
+                Dine With Us
+            </p>
+
+            <h1>Reserve Your Table</h1>
+
+            <p>
+                Plan your visit and enjoy an unforgettable
+                dining experience at Paarambariya Virundhu.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RESERVATION SECTION ================= -->
+    <section class="reservation-section">
+
+        <div class="reservation-container">
+
+
+            <!-- ================= FORM ================= -->
+            <div class="reservation-form-container">
+
+                <p class="section-label">
+                    Table Reservation
+                </p>
+
+                <h2>Book Your Table</h2>
+
+                <p class="form-intro">
+                    Please fill in the details below and our team
+                    will be happy to welcome you.
+                </p>
+
+
+                <form id="reservationForm">
+
+
+                    <!-- Full Name -->
+                    <div class="form-group">
+
+                        <label for="name">
+                            Full Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your full name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Email -->
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Phone -->
+                    <div class="form-group">
+
+                        <label for="phone">
+                            Phone Number
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="Enter your phone number"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- Date and Time -->
+                    <div class="form-row">
+
+
+                        <div class="form-group">
+
+                            <label for="date">
+                                Reservation Date
+                            </label>
+
+                            <input
+                                type="date"
+                                id="date"
+                                name="date"
+                                required
+                            >
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label for="time">
+                                Reservation Time
+                            </label>
+
+                            <select
+                                id="time"
+                                name="time"
+                                required
+                            >
+
+                                <option value="">
+                                    Select Time
+                                </option>
+
+                                <option value="11:00 AM">
+                                    11:00 AM
+                                </option>
+
+                                <option value="12:00 PM">
+                                    12:00 PM
+                                </option>
+
+                                <option value="01:00 PM">
+                                    01:00 PM
+                                </option>
+
+                                <option value="02:00 PM">
+                                    02:00 PM
+                                </option>
+
+                                <option value="06:00 PM">
+                                    06:00 PM
+                                </option>
+
+                                <option value="07:00 PM">
+                                    07:00 PM
+                                </option>
+
+                                <option value="08:00 PM">
+                                    08:00 PM
+                                </option>
+
+                                <option value="09:00 PM">
+                                    09:00 PM
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Number of Guests -->
+                    <div class="form-group">
+
+                        <label for="guests">
+                            Number of Guests
+                        </label>
+
+                        <select
+                            id="guests"
+                            name="guests"
+                            required
+                        >
+
+                            <option value="">
+                                Select Number of Guests
+                            </option>
+
+                            <option value="1">
+                                1 Guest
+                            </option>
+
+                            <option value="2">
+                                2 Guests
+                            </option>
+
+                            <option value="3">
+                                3 Guests
+                            </option>
+
+                            <option value="4">
+                                4 Guests
+                            </option>
+
+                            <option value="5">
+                                5 Guests
+                            </option>
+
+                            <option value="6">
+                                6 Guests
+                            </option>
+
+                            <option value="7">
+                                7 Guests
+                            </option>
+
+                            <option value="8">
+                                8 Guests
+                            </option>
+
+                            <option value="9">
+                                9 Guests
+                            </option>
+
+                            <option value="10">
+                                10 Guests
+                            </option>
+
+                            <option value="10+">
+                                More than 10 Guests
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Occasion -->
+                    <div class="form-group">
+
+                        <label for="occasion">
+                            Occasion
+                        </label>
+
+                        <select
+                            id="occasion"
+                            name="occasion"
+                        >
+
+                            <option value="">
+                                Select Occasion
+                            </option>
+
+                            <option value="birthday">
+                                Birthday
+                            </option>
+
+                            <option value="anniversary">
+                                Anniversary
+                            </option>
+
+                            <option value="family">
+                                Family Gathering
+                            </option>
+
+                            <option value="business">
+                                Business Dinner
+                            </option>
+
+                            <option value="celebration">
+                                Special Celebration
+                            </option>
+
+                            <option value="other">
+                                Other
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- Special Requests -->
+                    <div class="form-group">
+
+                        <label for="requests">
+                            Special Requests
+                        </label>
+
+                        <textarea
+                            id="requests"
+                            name="requests"
+                            rows="5"
+                            placeholder="Any special requests or requirements?"
+                        ></textarea>
+
+                    </div>
+
+
+                    <!-- Submit Button -->
+                    <button
+                        type="submit"
+                        class="btn Reservation-btn"
+                    >
+                        Confirm Reservation
+                    </button>
+
+
+                    <!-- Success Message -->
+                    <div
+                        id="ReservationMessage"
+                        class="Reservation-message"
+                    ></div>
+
+                </form>
+
+            </div>
+
+
+            <!-- ================= RESERVATION INFORMATION ================= -->
+            <div class="Reservation-info">
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        📅
+                    </div>
+
+                    <h3>Plan Ahead</h3>
+
+                    <p>
+                        We recommend making a reservation in advance,
+                        especially for weekends and special occasions.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🕐
+                    </div>
+
+                    <h3>Opening Hours</h3>
+
+                    <p>
+                        Monday - Friday<br>
+                        11:00 AM - 10:00 PM
+                    </p>
+
+                    <p>
+                        Saturday - Sunday<br>
+                        10:00 AM - 11:00 PM
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        👨‍👩‍👧‍👦
+                    </div>
+
+                    <h3>Family Friendly</h3>
+
+                    <p>
+                        Bring your family and friends. Our comfortable
+                        dining space is perfect for gatherings.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        📞
+                    </div>
+
+                    <h3>Need Help?</h3>
+
+                    <p>
+                        Have questions about your reservation?
+                    </p>
+
+                    <a href="Contact.html">
+                        Contact Our Team
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= RESERVATION NOTE ================= -->
+    <section class="reservation-note">
+
+        <div class="note-content">
+
+            <p class="section-label">
+                A Note From Us
+            </p>
+
+            <h2>Your Table Is Waiting</h2>
+
+            <p>
+                At Paarambariya Virundhu, every guest is treated like family.
+                We look forward to welcoming you and making your
+                dining experience special.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer">
+
+        <div class="footer-content">
+
+
+            <!-- Footer About -->
+            <div class="footer-about">
+
+                <h2>PAARAMBARIYA VIRUNDHU</h2>
+
+                <p>
+                    Traditional Tamil cuisine served with warmth,
+                    love, and hospitality.
+                </p>
+
+            </div>
+
+
+            <!-- Footer Links -->
+            <div class="footer-links">
+
+                <h3>Quick Links</h3>
+
+                <a href="Homepage.html">Home</a>
+
+                <a href="Menu.html">Menu</a>
+
+                <a href="About.html">About Us</a>
+
+                <a href="Gallery.html">Gallery</a>
+
+                <a href="Reservation.html">Reservation</a>
+
+                <a href="Contact.html">Contact</a>
+
+            </div>
+
+
+            <!-- Footer Contact -->
+            <div class="footer-contact">
+
+                <h3>Contact</h3>
+
+                <p>📍 Tamil Nadu, India</p>
+
+                <p>📞 +91 98765 43210</p>
+
+                <p>✉️ hello@paarambariyavirundhu.com</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Copyright -->
+        <div class="copyright">
+
+            <p>
+                © 2026 Paarambariya Virundhu. All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="Script.js"></script>
+
+</body>
+
+</html>

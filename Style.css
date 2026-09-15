@@ -1,0 +1,1800 @@
+/* =========================================================
+   PAARAMBARIYA VIRUNDHU - RESTAURANT WEBSITE
+   Main Stylesheet
+========================================================= */
+
+
+/* =========================================================
+   1. GOOGLE FONT
+========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+/* =========================================================
+   2. ROOT VARIABLES
+========================================================= */
+
+:root {
+
+    --primary-color: #7a2e2e;
+    --secondary-color: #c59d5f;
+
+    --dark-color: #241a17;
+    --text-color: #4a403c;
+
+    --light-color: #fffaf3;
+    --white-color: #ffffff;
+
+    --border-color: #e8ddd1;
+
+    --heading-font: 'Cormorant Garamond', serif;
+    --body-font: 'Poppins', sans-serif;
+
+    --container-width: 1200px;
+
+}
+
+
+/* =========================================================
+   3. RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    background-color: var(--white-color);
+    line-height: 1.7;
+}
+
+
+img {
+    width: 100%;
+    display: block;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+ul {
+    list-style: none;
+}
+
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   4. COMMON CONTAINER
+========================================================= */
+
+.container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: auto;
+}
+
+
+/* =========================================================
+   5. HEADER / NAVBAR
+========================================================= */
+
+.header {
+    width: 100%;
+    background-color: var(--white-color);
+    position: relative;
+    top: 0;
+    z-index: 1000;
+
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.navbar {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: auto;
+
+    min-height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.logo a {
+    font-family: var(--heading-font);
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: var(--primary-color);
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--dark-color);
+
+    position: relative;
+
+    transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-color);
+}
+
+
+.nav-links a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: var(--secondary-color);
+
+    transition: width 0.3s ease;
+}
+
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   6. MOBILE MENU BUTTON
+========================================================= */
+
+.Menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+
+.Menu-toggle span {
+    display: block;
+
+    width: 28px;
+    height: 3px;
+
+    margin: 5px 0;
+
+    background-color: var(--dark-color);
+}
+
+
+/* =========================================================
+   7. COMMON BUTTON
+========================================================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 13px 28px;
+
+    background-color: var(--primary-color);
+    color: var(--white-color);
+
+    border: 2px solid var(--primary-color);
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--primary-color);
+}
+
+
+/* =========================================================
+   8. COMMON SECTION
+========================================================= */
+
+section {
+    padding: 90px 5%;
+}
+
+
+.section-label {
+    color: var(--secondary-color);
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+
+.section-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+
+    text-align: center;
+}
+
+
+.section-heading h2,
+.About-content h2,
+.kitchen-content h2,
+.chef-content h2,
+.contact-info h2,
+.contact-form-container h2,
+.reservation-form-container h2 {
+    font-family: var(--heading-font);
+
+    font-size: 46px;
+    line-height: 1.15;
+
+    color: var(--dark-color);
+
+    margin-bottom: 18px;
+}
+
+
+.section-heading p {
+    color: var(--text-color);
+}
+
+
+/* =========================================================
+   9. HOMEPAGE HERO
+========================================================= */
+
+.hero {
+    min-height: 90vh;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(36, 26, 23, 0.55),
+            rgba(36, 26, 23, 0.55)
+        ),
+        url("Images/Traditional\ Indian\ Food.png");
+
+    background-size: cover;
+    background-position: center;
+}
+
+
+.hero-content {
+    width: 90%;
+    max-width: 750px;
+    margin: auto;
+
+    text-align: center;
+
+    color: var(--white-color);
+}
+
+
+.hero-content .section-label {
+    color: var(--secondary-color);
+}
+
+
+.hero-content h1 {
+    font-family: var(--heading-font);
+
+    font-size: 78px;
+    line-height: 1;
+
+    margin-bottom: 25px;
+}
+
+
+.hero-content p {
+    font-size: 17px;
+
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+}
+
+
+.hero-content .btn {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+
+.hero-content .btn:hover {
+    background-color: transparent;
+    color: var(--white-color);
+}
+
+
+/* =========================================================
+   10. ABOUT STORY
+========================================================= */
+
+.About-story {
+    max-width: var(--container-width);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.About-image {
+    height: 500px;
+    overflow: hidden;
+}
+
+
+.About-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.About-image:hover img {
+    transform: scale(1.04);
+}
+
+
+.About-content p {
+    margin-bottom: 18px;
+}
+
+
+/* =========================================================
+   11. PHILOSOPHY
+========================================================= */
+
+.philosophy {
+    background-color: var(--light-color);
+}
+
+
+.features {
+    max-width: var(--container-width);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+
+.feature {
+    background-color: var(--white-color);
+
+    padding: 45px 30px;
+
+    text-align: center;
+
+    border: 1px solid var(--border-color);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+.feature:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+.feature-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+
+.feature h3 {
+    font-family: var(--heading-font);
+
+    font-size: 28px;
+
+    color: var(--dark-color);
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   12. KITCHEN SECTION
+========================================================= */
+
+.kitchen-section {
+    max-width: var(--container-width);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.kitchen-content p {
+    margin-bottom: 18px;
+}
+
+
+.kitchen-content .btn {
+    margin-top: 10px;
+}
+
+
+.kitchen-image {
+    height: 500px;
+    overflow: hidden;
+}
+
+
+.kitchen-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========================================================
+   13. CHEF SECTION
+========================================================= */
+
+.chef-section {
+    background-color: var(--light-color);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+.chef-image {
+    height: 500px;
+}
+
+
+.chef-image img {
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.chef-content {
+    max-width: 550px;
+}
+
+
+.chef-content p {
+    margin-bottom: 18px;
+}
+
+
+.chef-quote {
+    font-family: var(--heading-font);
+
+    font-size: 24px;
+    font-style: italic;
+
+    color: var(--primary-color);
+
+    border-left: 3px solid var(--secondary-color);
+
+    padding-left: 20px;
+}
+
+
+/* =========================================================
+   14. VALUES
+========================================================= */
+
+.values-section {
+    background-color: var(--white-color);
+}
+
+
+.values {
+    max-width: var(--container-width);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.value {
+    padding: 30px;
+
+    border-top: 2px solid var(--secondary-color);
+}
+
+
+.value h3 {
+    font-family: var(--heading-font);
+
+    font-size: 25px;
+
+    color: var(--dark-color);
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================================================
+   15. MENU PAGE
+========================================================= */
+
+.Menu-hero,
+.About-hero,
+.gallery-hero,
+.Reservation-hero,
+.contact-hero {
+
+    min-height: 55vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(36, 26, 23, 0.58),
+            rgba(36, 26, 23, 0.58)
+        ),
+        url("Images/Traditional\ Indian\ Food.png");
+
+    background-size: cover;
+    background-position: center;
+
+    color: var(--white-color);
+}
+
+
+.Menu-hero-content,
+.About-hero-content,
+.gallery-hero-content,
+.Reservation-hero-content,
+.contact-hero-content {
+
+    max-width: 750px;
+    padding: 20px;
+}
+
+
+.Menu-hero h1,
+.About-hero h1,
+.gallery-hero h1,
+.Reservation-hero h1,
+.contact-hero h1 {
+
+    font-family: var(--heading-font);
+
+    font-size: 70px;
+    line-height: 1;
+
+    margin-bottom: 20px;
+}
+
+
+.Menu-hero p,
+.About-hero p,
+.gallery-hero p,
+.Reservation-hero p,
+.contact-hero p {
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   16. MENU CATEGORIES
+========================================================= */
+
+.Menu-section {
+    max-width: var(--container-width);
+    margin: auto;
+    padding: 80px 0;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading .section-label {
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    font-family: var(--heading-font);
+    font-size: 48px;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.Menu-container {
+    width: 90%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.Menu-item {
+    background-color: var(--white-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 20px 25px 12px;
+}
+
+.menu-title h3 {
+    margin: 0;
+}
+
+.veg-badge {
+    font-family: var(--body-font);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 4px 8px;
+    border: 1px solid #2e7d32;
+    color: #2e7d32;
+    background-color: #f1f8f1;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.nonveg-badge {
+    font-family: var(--body-font);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 4px 8px;
+    border: 1px solid #c62828;
+    color: #c62828;
+    background-color: #fff5f5;
+    border-radius: 4px;
+    white-space: nowrap;
+}
+
+.Menu-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(36, 26, 23, 0.12);
+}
+
+.Menu-item > div {
+    padding-bottom: 20px;
+}
+
+.Menu-item h3 {
+    font-family: var(--heading-font);
+    font-size: 28px;
+    color: var(--dark-color);
+    margin: 0;
+}
+
+.Menu-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.Menu-item p {
+    color: var(--text-color);
+    font-size: 14px;
+    line-height: 1.7;
+    margin: 18px 25px 0;
+}
+
+.Menu-item > span {
+    display: block;
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 25px 22px;
+}
+
+/* =========================================================
+   17. GALLERY
+========================================================= */
+
+.gallery-intro {
+    padding-bottom: 40px;
+}
+
+
+.gallery-section {
+    max-width: var(--container-width);
+    margin: auto;
+}
+
+
+.gallery-filter {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 45px;
+}
+
+
+.filter-btn {
+    padding: 10px 22px;
+
+    background-color: transparent;
+
+    border: 1px solid var(--border-color);
+
+    color: var(--dark-color);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-color);
+
+    color: var(--white-color);
+
+    border-color: var(--primary-color);
+}
+
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.gallery-item {
+    height: 320px;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+.gallery-item img {
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+
+.gallery-overlay {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 25px;
+
+    color: var(--white-color);
+
+    background: linear-gradient(
+        transparent,
+        rgba(0, 0, 0, 0.8)
+    );
+
+    transform: translateY(100%);
+
+    transition: transform 0.4s ease;
+}
+
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+
+.gallery-overlay h3 {
+    font-family: var(--heading-font);
+
+    font-size: 25px;
+}
+
+
+.gallery-overlay p {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   18. GALLERY EXPERIENCE
+========================================================= */
+
+.gallery-experience {
+    background-color: var(--light-color);
+
+    text-align: center;
+}
+
+
+.experience-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+.experience-content h2 {
+    font-family: var(--heading-font);
+
+    font-size: 48px;
+
+    color: var(--dark-color);
+
+    margin-bottom: 20px;
+}
+
+
+.experience-content p {
+    margin-bottom: 25px;
+}
+
+
+/* =========================================================
+   19. RESERVATION
+========================================================= */
+
+.reservation-section {
+    background-color: var(--light-color);
+}
+
+
+.reservation-container {
+    max-width: var(--container-width);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 60px;
+}
+
+
+.reservation-form-container,
+.contact-form-container {
+
+    background-color: var(--white-color);
+
+    padding: 45px;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+}
+
+
+.form-intro {
+    margin-bottom: 30px;
+}
+
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    color: var(--dark-color);
+
+    margin-bottom: 7px;
+}
+
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    padding: 13px 15px;
+
+    border: 1px solid var(--border-color);
+
+    outline: none;
+
+    background-color: var(--white-color);
+
+    color: var(--text-color);
+
+    font-size: 14px;
+
+    transition: border-color 0.3s ease;
+}
+
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+
+    border-color: var(--secondary-color);
+}
+
+
+.form-group textarea {
+    resize: vertical;
+}
+
+
+.form-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.reservation-btn {
+    width: 100%;
+}
+
+
+.reservation-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.info-card {
+    background-color: var(--white-color);
+
+    padding: 28px;
+
+    border-left: 3px solid var(--secondary-color);
+}
+
+
+.info-icon {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+
+.info-card h3 {
+    font-family: var(--heading-font);
+
+    font-size: 25px;
+
+    color: var(--dark-color);
+
+    margin-bottom: 7px;
+}
+
+
+.info-card a {
+    color: var(--primary-color);
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   20. RESERVATION NOTE
+========================================================= */
+
+.reservation-note {
+    text-align: center;
+}
+
+
+.note-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+.note-content h2 {
+    font-family: var(--heading-font);
+
+    font-size: 48px;
+
+    color: var(--dark-color);
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   21. CONTACT
+========================================================= */
+
+.contact-section {
+    background-color: var(--light-color);
+}
+
+
+.contact-container {
+    max-width: var(--container-width);
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+}
+
+
+.contact-intro {
+    margin-bottom: 30px;
+}
+
+
+.contact-item {
+    display: flex;
+
+    gap: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+.contact-icon {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--white-color);
+
+    font-size: 20px;
+}
+
+
+.contact-item h3 {
+    font-family: var(--heading-font);
+
+    font-size: 23px;
+
+    color: var(--dark-color);
+
+    margin-bottom: 3px;
+}
+
+
+.contact-item p {
+    font-size: 14px;
+}
+
+
+.social-links {
+    margin-top: 35px;
+}
+
+
+.social-links h3 {
+    font-family: var(--heading-font);
+
+    font-size: 25px;
+
+    color: var(--dark-color);
+
+    margin-bottom: 15px;
+}
+
+
+.social-icons {
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.social-icons a {
+    padding: 8px 15px;
+
+    border: 1px solid var(--border-color);
+
+    background-color: var(--white-color);
+
+    font-size: 13px;
+
+    transition: all 0.3s ease;
+}
+
+
+.social-icons a:hover {
+    background-color: var(--primary-color);
+
+    color: var(--white-color);
+
+    border-color: var(--primary-color);
+}
+
+
+/* =========================================================
+   22. MAP
+========================================================= */
+
+.map-section {
+    text-align: center;
+}
+
+
+.map-container {
+    max-width: var(--container-width);
+
+    height: 400px;
+
+    margin: auto;
+
+    background-color: #e8e1d9;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.map-placeholder {
+    text-align: center;
+}
+
+
+.map-icon {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.map-placeholder h3 {
+    font-family: var(--heading-font);
+
+    font-size: 30px;
+
+    color: var(--dark-color);
+
+    margin-bottom: 5px;
+}
+
+
+.map-placeholder p {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   23. RESERVATION CTA
+========================================================= */
+
+.reservation-cta {
+    background:
+        linear-gradient(
+            rgba(173, 140, 140, 0.88),
+            rgba(143, 108, 108, 0.88)
+        ),
+        url("Images/Restaurant\ interior.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    text-align: center;
+
+    color: var(--white-color);
+}
+
+
+.reservation-content {
+    max-width: 700px;
+
+    margin: auto;
+}
+
+
+.reservation-content .section-label {
+    color: var(--secondary-color);
+}
+
+
+.reservation-content h2 {
+    font-family: var(--heading-font);
+
+    font-size: 55px;
+
+    margin-bottom: 15px;
+}
+
+
+.reservation-content p {
+    margin-bottom: 25px;
+}
+
+
+.reservation-content .btn {
+    background-color: var(--secondary-color);
+
+    border-color: var(--secondary-color);
+}
+
+
+.reservation-content .btn:hover {
+    background-color: transparent;
+
+    color: var(--white-color);
+}
+
+
+/* =========================================================
+   24. FOOTER
+========================================================= */
+
+.footer {
+    background-color: var(--dark-color);
+
+    color: #ddd;
+}
+
+
+.footer-content {
+    max-width: var(--container-width);
+
+    width: 90%;
+
+    margin: auto;
+
+    padding: 70px 0 50px;
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr 1.5fr;
+
+    gap: 60px;
+}
+
+
+.footer-about h2 {
+    font-family: var(--heading-font);
+
+    font-size: 35px;
+
+    color: var(--white-color);
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+
+.footer-about p {
+    max-width: 350px;
+
+    font-size: 14px;
+}
+
+
+.footer h3 {
+    font-family: var(--heading-font);
+
+    font-size: 25px;
+
+    color: var(--white-color);
+
+    margin-bottom: 18px;
+}
+
+
+.footer-links {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+
+.footer-links a {
+    font-size: 14px;
+
+    transition: color 0.3s ease;
+}
+
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+}
+
+
+.footer-contact p {
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+
+.copyright {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+    text-align: center;
+
+    padding: 20px;
+
+    font-size: 12px;
+
+    color: #aaa;
+}
+
+
+/* =========================================================
+   25. FORM SUCCESS MESSAGE
+========================================================= */
+
+.reservation-message,
+.contact-message {
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   26. ANIMATION
+========================================================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.hero-content,
+.About-hero-content,
+.gallery-hero-content,
+.reservation-hero-content,
+.contact-hero-content {
+
+    animation: fadeIn 1s ease;
+}
+
+
+/* =========================================================
+   27. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 992px) {
+
+
+    /* Navbar */
+
+    .nav-links {
+        gap: 18px;
+    }
+
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+
+    /* Hero */
+
+    .hero-content h1 {
+        font-size: 65px;
+    }
+
+
+    /* About */
+
+    .About-story,
+    .kitchen-section,
+    .chef-section,
+    .contact-container {
+
+        gap: 40px;
+    }
+
+
+    /* Features */
+
+    .features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Values */
+
+    .values {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Gallery */
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* Reservation */
+
+    .reservation-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Footer */
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   28. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+
+    /* Navbar */
+
+    .navbar {
+        min-height: 70px;
+    }
+
+
+    .logo a {
+        font-size: 27px;
+    }
+
+
+    .Menu-toggle {
+        display: block;
+    }
+
+
+    .nav-links {
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        background-color: var(--white-color);
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding: 25px 5%;
+
+        gap: 18px;
+
+        display: none;
+
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+
+    }
+
+
+    .nav-links.active {
+        display: flex;
+    }
+
+
+    /* Sections */
+
+    section {
+        padding: 65px 5%;
+    }
+
+
+    /* Headings */
+
+    .section-heading h2,
+    .About-content h2,
+    .kitchen-content h2,
+    .chef-content h2,
+    .contact-info h2,
+    .contact-form-container h2,
+    .Reservation-form-container h2 {
+
+        font-size: 38px;
+    }
+
+
+    /* Hero */
+
+    .hero {
+        min-height: 80vh;
+    }
+
+
+    .hero-content h1 {
+        font-size: 55px;
+    }
+
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+
+    /* Page Hero */
+
+    .Menu-hero,
+    .About-hero,
+    .Gallery-hero,
+    .Reservation-hero,
+    .contact-hero {
+
+        min-height: 45vh;
+    }
+
+
+    .Menu-hero h1,
+    .About-hero h1,
+    .Gallery-hero h1,
+    .Reservation-hero h1,
+    .contact-hero h1 {
+
+        font-size: 55px;
+    }
+
+
+    /* About */
+
+    .About-story,
+    .kitchen-section,
+    .chef-section,
+    .contact-container {
+
+        grid-template-columns: 1fr;
+    }
+
+
+    .About-image,
+    .kitchen-image,
+    .chef-image {
+
+        height: 400px;
+    }
+
+
+    /* Features */
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Values */
+
+    .values {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Menu */
+
+    .Menu-container {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Gallery */
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .gallery-item {
+        height: 350px;
+    }
+
+
+    /* Reservation */
+
+    .reservation-form-container,
+    .contact-form-container {
+        padding: 30px 20px;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+
+    /* CTA */
+
+    .reservation-content h2 {
+        font-size: 42px;
+    }
+
+
+    /* Footer */
+
+    .footer-content {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 50px 0 35px;
+    }
+
+}
+
+
+/* =========================================================
+   29. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+
+    .logo a {
+        font-size: 24px;
+    }
+
+
+    .hero-content h1 {
+        font-size: 45px;
+    }
+
+
+    .Menu-hero h1,
+    .About-hero h1,
+    .Gallery-hero h1,
+    .Reservation-hero h1,
+    .contact-hero h1 {
+
+        font-size: 45px;
+    }
+
+
+    .section-heading h2,
+    .About-content h2,
+    .kitchen-content h2,
+    .chef-content h2,
+    .contact-info h2,
+    .contact-form-container h2,
+    .reservation-form-container h2 {
+
+        font-size: 34px;
+    }
+
+
+    .gallery-item {
+        height: 280px;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+    }
+
+}
